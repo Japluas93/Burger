@@ -53,6 +53,20 @@ const orm = {
       cb(result);
     });
   },
+  updateOne: function (tableInput, objColVals, condition, cb) {
+    let queryString = "UPDATE " + tableInput;
+
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
+
+    connection.query(queryString, function (err, result) {
+      if (err) throw err;
+      console.log(result);
+      cb(result);
+    });
+  },
 };
 
 // Exporting the orm object
