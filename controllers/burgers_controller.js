@@ -4,3 +4,5 @@ var express = require("express");
 var burger = require("../models/burger.js");
 // Creates router for the application
 var router = express.Router();
+// Exporting router
+module.exports = router;
