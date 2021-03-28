@@ -38,6 +38,21 @@ const orm = {
       cb(result);
     });
   },
+  insertOne: function (tableInput, colName, vals, cb) {
+    let queryString = "INSERT INTO " + tableInput;
+    queryString += " (";
+    queryString += colName.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+
+    connection.query(queryString, vals, function (err, result) {
+      if (err) throw err;
+      console.log(result);
+      cb(result);
+    });
+  },
 };
 
 // Exporting the orm object
