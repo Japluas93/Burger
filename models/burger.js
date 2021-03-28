@@ -17,3 +17,5 @@ const burger = {
     });
   },
 };
+// Exporting the burger object
+module.exports = burger;
