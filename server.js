@@ -11,3 +11,5 @@ app.use(express.static("public"));
 
 app.engine("handlebars", expressHandleBars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+// App will serve the routes
+app.use(routes);
