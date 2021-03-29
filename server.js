@@ -15,3 +15,8 @@ app.engine("handlebars", expressHandleBars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 // App will serve the routes
 app.use(routes);
+// Start our server so that it can begin listening to client requests.
+app.listen(PORT, function () {
+  // Log (server-side) when our server has started
+  console.log("Server is listening at localhost:" + PORT);
+});
