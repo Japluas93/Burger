@@ -1,5 +1,7 @@
 // Loads my express module
 const express = require("express");
+// Sets the port for the application
+const PORT = process.env.PORT || 3000;
 // Creates my express application.
 const app = express();
 // Set Handlebars
