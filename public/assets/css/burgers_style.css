@@ -15,3 +15,9 @@ button {
 h1 {
   font-size: 50px;
 }
+img {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
