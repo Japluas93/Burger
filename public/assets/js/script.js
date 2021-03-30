@@ -6,10 +6,10 @@ $(function () {
       burger_name: $("#burgerForm").val().trim(),
       devoured: false,
     };
-
+    console.log(newBurger);
     $.ajax("/api/burgers", {
       type: "POST",
-      data: newBurger,
+      data: JSON.stringify(newBurger),
     }).then(function () {
       console.log("A new burger has been created");
       location.reload();
