@@ -4,12 +4,12 @@ $(function () {
 
     const newBurger = {
       burger_name: $("#burgerForm").val().trim(),
-      devoured: false,
+      devoured: 0,
     };
     console.log(newBurger);
     $.ajax("/api/burgers", {
       type: "POST",
-      data: JSON.stringify(newBurger),
+      data: newBurger,
     }).then(function () {
       console.log("A new burger has been created");
       location.reload();

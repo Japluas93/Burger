@@ -10,6 +10,9 @@ var expressHandleBars = require("express-handlebars");
 const routes = require("./controllers/burgers_controller.js");
 // App will serve static content from the "public" folder
 app.use(express.static("public"));
+// Parse application body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.engine("handlebars", expressHandleBars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
