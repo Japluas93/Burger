@@ -3,3 +3,11 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
 }
+button {
+  background-color: #3e8be4;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
